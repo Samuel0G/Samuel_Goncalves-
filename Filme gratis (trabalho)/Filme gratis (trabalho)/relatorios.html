@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="EstilosdeRelatorios.css">
+    <title>Relatórios</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Relatórios</h1>
+        <table id="relatorios-table">
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Cidade</th>
+                <th>Telefone</th>
+            </tr>
+        </table>
+        <script>
+            // Recupera registros do armazenamento local
+            const registros = JSON.parse(localStorage.getItem('registros'));
+        
+            if (registros) {
+                const tabelaRelatorios = document.getElementById("relatorios-table");
+        
+                registros.forEach((registro) => {
+                    const newRow = tabelaRelatorios.insertRow();
+                    const nomeCell = newRow.insertCell(0);
+                    const emailCell = newRow.insertCell(1);
+                    const cidadeCell = newRow.insertCell(2);
+                    const telefoneCell = newRow.insertCell(3);
+        
+                    nomeCell.innerHTML = registro.nome;
+                    emailCell.innerHTML = registro.email;
+                    cidadeCell.innerHTML = registro.cidade;
+                    telefoneCell.innerHTML = registro.telefone;
+                });
+            }
+        </script>
+        <div class="button-container">
+            <a href="index.html"><button class="Home-Volta"  class="button button-home"  onclick="window.location.href='index.html'">Home</button></a>
+           
+        </div>
+        
+        
+    </body>
+    </html>  
