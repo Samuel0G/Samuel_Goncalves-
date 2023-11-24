@@ -1,104 +1,116 @@
+/* Definições gerais para o corpo da página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background-color:#121212;
+    color: #fff;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-
+/* Estilo do cabeçalho da página */
 header {
     background-color: #333;
     color: #fff;
     padding: 10px;
+    text-align: left;
+   
 }
 
-
+/* Estilo da barra de navegação */
 nav {
-    margin-top: 10px;
+    margin-top: -60px;
 }
 
-
+/* Estilo dos links na barra de navegação */
 nav a {
     text-decoration: none;
     color: #fff;
-    background-color: #0073e6;
-    padding: 20px 40px;
-    margin: 5px;
-    border: 0px solid #333;
+    padding: 10px 40px;
+    margin: 10px;
+    border: px solid #333;
     border-radius: 10px;
 }
-
-
-.highlighted-movie {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px auto; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    font-size: 15px;
-    font-family: "Helvetica", sans-serif;
-    max-width: 500px;
-}
-
-
+/* Estilo do contêiner de filmes */
 .catalog {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
+    padding: 50px;
+
 }
 
-
+/* Estilo de cada filme individual */
 .movie {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    display: inline-block;
+    vertical-align: top;
     border-radius: 5px;
-    padding: 10px;
     margin: 10px;
     max-width: 200px;
+    height: 300px; 
 }
 
-
-.movie h3 {
-    font-size: 18px;
+/* Estilo da imagem do filme */
+.movie img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
-
-
+/* Estilo da imagem do filme */
 .movie img {
     max-width: 100%;
     border-radius: 5px;
 }
-
-
-.movie p {
-    color: #666;
+/* Estilo da barra de pesquisa */
+.search-bar {
+    text-align: center;
+    margin-top: 50px;
 }
-
-
-.movie button {
+/* Estilo do campo de entrada na barra de pesquisa */
+.search-bar input {
+    padding: 10px;
+    font-size: 15px;
+    background-color: #333; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+}
+/* Estilo do botão na barra de pesquisa */
+.search-bar button {
+    padding: 10px 10px;
+    font-size: 15px;
+    cursor: pointer;
     background-color: #0073e6;
     color: #fff;
-    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
 }
-.movie img {
-    max-width: 100%;
-    border-radius: 5px;
+/* Estilo dos botões de gênero */
+.genre-buttons {
+    text-align: center;
+    margin: 40px ;
+    
 }
-.watch-button {
-    background-color: #0073e6; /* Azul */
+/* Estilo dos botões de gênero individual */
+.genre-btn {
+    background-color: #023d79; 
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 10px;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
 }
+/* Efeito de cor ao passar o cursor sobre os botões de gênero */
+.genre-btn:hover {
+    background-color: #005bb5; 
+}
+
 
 
 
